@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #ddd;
+}
+
+#sidebar {
+    width: 220px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    background: #151515;
+    overflow: hidden;
+    color: #fff;
+    transition: 0.8s;
+}
+#body {
+    width: calc(100% - 220px);
+    margin-left: 220px;
+    height: 100vh;
+    transition: 0.8s;
+}
+.navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: #ff3333;
+    color: #fff;
+    line-height: 50px;
+    padding: 0 40px;
+    text-align: right;
+}
+
+.content {
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+}
+
+.toggle {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #151515;
+}
+
+button {
+    cursor: pointer;
+}
+
+.colors-box {
+    width: 0;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    overflow: hidden;
+    position: fixed;
+    transition: 0.8s;
+}
+
+.colors-box-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    width: 280px;
+}
+
+.colors-box-title h3 {
+    line-height: 32px;
+}
+
+.colors-box-title .toggle {
+    background: #eee;
+    transition: 0.5s;
+}
+
+.colors-box-title .toggle:hover {
+    background: #bbb;
+}

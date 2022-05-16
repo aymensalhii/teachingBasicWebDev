@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn JS</title>
+
+    <link rel="stylesheet" href="css/sidebar.css">
+</head>
+<body onload="fn()">
+    
+    <div class="container">
+        <div id="sidebar" class="primary-bg"></div>
+
+        <div id="body">
+            <div class="navbar">
+                <button class="toggle" onclick="togglefn()"><i class="fas fa-bars"></i></button>
+                <button class="toggle" onclick="colorsBox()"><i class="fas fa-ellipsis-v"></i></button>
+            </div>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p><p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p><p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quaerat nulla nobis! Harum corrupti laboriosam quasi fuga aliquid quo iste non reprehenderit voluptatibus cum nesciunt sed quas iure, natus dolorum.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="colors-box">
+        <div class="colors-box-title">
+            <h3>Choose your prefered color</h3>
+            <button class="toggle" onclick="colorsBox()"><i class="fas fa-times"></i></button>
+        </div>
+        <hr>
+    </div>
+
+    <script>
+        function fn() {
+            if(localStorage.getItem('sidebarbg') == null) {
+                localStorage.setItem('sidebarbg', "red");
+            } else {
+                const bg = localStorage.getItem("sidebarbg");
+                document.getElementById('sidebar').style.background = bg;
+            }
+        }
+    </script>
+
+    <script src="js/sidebar.js"></script>
+    <script src="https://kit.fontawesome.com/469a13ab41.js" crossorigin="anonymous"></script>
+</body>
+</html>
